@@ -1,0 +1,416 @@
+/* ==============================
+   Global Styles
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #0d1117;
+  color: #e6edf3;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #f0f6fc;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #1f6feb;
+}
+
+/* ==============================
+   Header & Navigation
+============================== */
+header {
+  background: #161b22;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f0f6fc;
+}
+
+.cursor {
+  color: #58a6ff;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links li a:hover {
+  border-bottom: 2px solid #58a6ff;
+}
+
+/* ==============================
+   Hamburger Menu
+============================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #f0f6fc;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ==============================
+   Hero Section (with photo)
+============================== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(145deg, #0d1117, #161b22);
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.hero-photo img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid #58a6ff;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(88,166,255,0.5);
+  transition: transform 0.3s ease;
+}
+
+.hero-photo img:hover {
+  transform: scale(1.05);
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+
+.hero-text h2 {
+  font-weight: 400;
+  margin: 1rem 0 2rem;
+  color: #8b949e;
+}
+
+.highlight {
+  color: #58a6ff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #58a6ff;
+  border-radius: 5px;
+  color: #58a6ff;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #58a6ff;
+  color: #0d1117;
+}
+
+/* ==============================
+   Sections
+============================== */
+.section {
+  padding: 3rem 2rem; 
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #58a6ff;
+  padding-left: 0.75rem;
+}
+
+/* ==============================
+   Timeline / Experience
+============================== */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.job h3 {
+  color: #58a6ff;
+}
+
+.job .date {
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+.job p, 
+.job ul {
+  text-align: left;   
+  max-width: 800px;
+  line-height: 1.7;
+  margin-left: 0;
+}
+
+.job ul li {
+  margin-bottom: 0.5rem;
+}
+
+.job p.techstack {
+  color: #58a6ff;       
+  font-weight: 500;      
+  margin: 0.25rem 0 0.75rem 0;
+  font-style: italic; 
+}
+
+.job h3 .location {
+  font-weight: 400;        
+  color: #8b949e;          
+  margin-left: 0.5rem;  
+  font-size: 1rem; 
+}
+
+
+/* ==============================
+   Education
+============================== */
+.edu {
+  margin-bottom: 1.5rem;
+}
+
+.edu h3 {
+  color: #58a6ff;
+}
+
+.edu .date {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+.edu span, 
+.edu p {
+  text-align: left;  
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+/* ==============================
+   Skills
+============================== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skills span {
+  background: #21262d;
+  border: 1px solid #30363d;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  border-color: #58a6ff;
+  color: #58a6ff;
+}
+
+/* ==============================
+   Certifications
+============================== */
+#certifications ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#certifications li {
+  text-align: left; 
+  max-width: 800px;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+#certifications li::before {
+  content: "✔";
+  color: #58a6ff;
+  position: absolute;
+  left: 0;
+}
+#certifications .date {
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+/* ==============================
+   Contact
+============================== */
+.contact ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact li {
+  margin-bottom: 0.75rem;
+}
+
+.contact a {
+  color: #58a6ff;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   Footer
+============================== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #161b22;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+/* ==============================
+   Responsive Drawer & Hero
+============================== */
+@media (max-width: 768px) {
+    .section {
+    padding: 2rem 1.5rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 220px;
+    background: #161b22;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 1.5rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+    width: 100%;
+    display: block;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-photo img {
+    width: 180px;
+    height: 180px;
+  }
+  #about p {
+  text-align: justify;
+  max-width: 800px;   
+  line-height: 1.8;  
+  margin: auto;       
+}
+.job h3 .location {
+  font-weight: 400;        
+  color: #8b949e;          
+  margin-left: 0.5rem;  
+  font-size: 0.9rem; 
+}
+}
+
+/* ==============================
+   About Section
+============================== */
+#about p {
+  text-align: justify;
+  max-width: 800px;  
+  line-height: 1.8;
+  margin: 0;  
+}
