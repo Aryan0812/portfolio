@@ -193,14 +193,50 @@ nav {
 /* ==============================
    Timeline / Experience
 ============================== */
+#experience {
+  padding: 3rem 2rem; /* Matches other sections */
+  background-color: #0d1117; /* Dark background */
+}
+
+#experience h2 {
+  font-size: 2rem; /* Matches other section headings */
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #58a6ff; /* Same accent as Projects */
+  padding-left: 0.75rem;
+  color: #f0f6fc; /* Light text */
+  text-align: left;
+}
+
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2rem; /* Same spacing as Projects */
+}
+
+.job {
+  background-color: #161b22; /* Dark card background */
+  border-left: 4px solid #58a6ff; /* Accent color consistent with Projects */
+  border-radius: 8px;
+  padding: 1.5rem 2rem; /* Matches Projects card padding */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* Subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.job:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(88,166,255,0.3); /* Subtle glow on hover */
 }
 
 .job h3 {
+  font-size: 1.25rem; /* Matches Projects h3 */
   color: #58a6ff;
+  margin-bottom: 0.5rem; /* Consistent spacing */
+}
+
+.job .location {
+  font-weight: 400;
+  color: #8b949e;
+  font-size: 0.95rem;
 }
 
 .job .date {
@@ -208,32 +244,109 @@ nav {
   color: #8b949e;
 }
 
-.job p, 
+.job p.techstack {
+  font-size: 0.95rem; /* Matches Projects techstack */
+  color: #58a6ff;
+  font-weight: 500;
+  margin: 0.5rem 0 1rem;
+  font-style: italic;
+}
+
 .job ul {
-  text-align: left;   
-  max-width: 800px;
-  line-height: 1.7;
-  margin-left: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #c9d1d9; /* Matches Projects list text color */
+  line-height: 1.7; /* Matches Projects line-height */
 }
 
 .job ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /* Matches Projects */
 }
 
-.job p.techstack {
-  color: #58a6ff;       
-  font-weight: 500;      
-  margin: 0.25rem 0 0.75rem 0;
-  font-style: italic; 
+.job .tech{
+  color: #c9d1d9;
+  font-style: normal;
+}
+/* ==============================
+   Projects
+============================== */
+#projects {
+  padding: 3rem 2rem; /* Matches other sections */
+  background-color: #0d1117; /* Dark background like Hero/Experience */
 }
 
-.job h3 .location {
-  font-weight: 400;        
-  color: #8b949e;          
-  margin-left: 0.5rem;  
-  font-size: 1rem; 
+#projects h2 {
+  font-size: 2rem; /* Matches other section headings */
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #58a6ff; /* Same accent as timeline */
+  padding-left: 0.75rem;
+  color: #f0f6fc; /* Light text */
+  text-align: left;
 }
 
+.project {
+  margin-bottom: 2rem; /* Matches timeline jobs spacing */
+  padding: 1.5rem 2rem; /* Slightly smaller padding for consistency */
+  border-left: 4px solid #58a6ff; /* Accent color consistent with timeline */
+  background-color: #161b22; /* Dark card background */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* Subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(88,166,255,0.3); /* Subtle glow on hover */
+}
+
+.project h3 {
+  font-size: 1.25rem; /* Matches Experience job titles */
+  color: #58a6ff;
+  margin-bottom: 0.5rem; /* Consistent spacing with other sections */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project .techstack {
+  font-size: 0.95rem; /* Matches Experience techstack */
+  color: #58a6ff; /* Consistent lighter text */
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.project ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #c9d1d9; /* Matches list text color in other sections */
+  line-height: 1.7; /* Matches Experience/About spacing */
+}
+
+.project ul li {
+  margin-bottom: 0.5rem; /* Matches other sections */
+}
+
+.project h3 a.github-link img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s;
+  filter: brightness(0) invert(1); /* Visible on dark background */
+}
+
+.project h3 a.github-link img:hover {
+  transform: scale(1.2);
+}
+
+.project .tech{
+  color: #c9d1d9;
+  font-style: normal;
+}
+
+.project .date {
+  font-size: 0.9rem;
+  color: #8b949e;
+}
 
 /* ==============================
    Education
@@ -397,12 +510,38 @@ footer {
   line-height: 1.8;  
   margin: auto;       
 }
-.job h3 .location {
-  font-weight: 400;        
-  color: #8b949e;          
-  margin-left: 0.5rem;  
-  font-size: 0.9rem; 
-}
+
+#experience {
+    padding: 2rem 1.5rem;
+  }
+
+  .job {
+    padding: 1rem 1.5rem;
+  }
+
+  .job h3 {
+    font-size: 1.1rem;
+  }
+
+  .job p.techstack {
+    font-size: 0.85rem;
+  }
+  
+ #projects {
+    padding: 2rem 1.5rem;
+  }
+  
+  .project {
+    padding: 1rem 1.5rem;
+  }
+
+  .project h3 {
+    font-size: 1.1rem;
+  }
+
+  .project .techstack {
+    font-size: 0.85rem;
+  }
 }
 
 /* ==============================
