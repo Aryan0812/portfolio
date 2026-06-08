@@ -108,7 +108,7 @@ nav {
 }
 
 /* ==============================
-   Hero Section (with photo)
+   Hero Section
 ============================== */
 .hero {
   min-height: 90vh;
@@ -160,6 +160,12 @@ nav {
   color: #58a6ff;
 }
 
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -174,11 +180,15 @@ nav {
   color: #0d1117;
 }
 
+.btn-outline {
+  background: transparent;
+}
+
 /* ==============================
    Sections
 ============================== */
 .section {
-  padding: 3rem 2rem; 
+  padding: 3rem 2rem;
   max-width: 1000px;
   margin: auto;
 }
@@ -191,46 +201,56 @@ nav {
 }
 
 /* ==============================
-   Timeline / Experience
+   About
+============================== */
+#about p {
+  text-align: justify;
+  max-width: 800px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ==============================
+   Experience / Timeline
 ============================== */
 #experience {
-  padding: 3rem 2rem; /* Matches other sections */
-  background-color: #0d1117; /* Dark background */
+  padding: 3rem 2rem;
+  background-color: #0d1117;
 }
 
 #experience h2 {
-  font-size: 2rem; /* Matches other section headings */
+  font-size: 2rem;
   margin-bottom: 1.5rem;
-  border-left: 5px solid #58a6ff; /* Same accent as Projects */
+  border-left: 5px solid #58a6ff;
   padding-left: 0.75rem;
-  color: #f0f6fc; /* Light text */
+  color: #f0f6fc;
   text-align: left;
 }
 
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* Same spacing as Projects */
+  gap: 2rem;
 }
 
 .job {
-  background-color: #161b22; /* Dark card background */
-  border-left: 4px solid #58a6ff; /* Accent color consistent with Projects */
+  background-color: #161b22;
+  border-left: 4px solid #58a6ff;
   border-radius: 8px;
-  padding: 1.5rem 2rem; /* Matches Projects card padding */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* Subtle shadow */
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .job:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(88,166,255,0.3); /* Subtle glow on hover */
+  box-shadow: 0 8px 20px rgba(88,166,255,0.3);
 }
 
 .job h3 {
-  font-size: 1.25rem; /* Matches Projects h3 */
+  font-size: 1.25rem;
   color: #58a6ff;
-  margin-bottom: 0.5rem; /* Consistent spacing */
+  margin-bottom: 0.5rem;
 }
 
 .job .location {
@@ -245,7 +265,7 @@ nav {
 }
 
 .job p.techstack {
-  font-size: 0.95rem; /* Matches Projects techstack */
+  font-size: 0.95rem;
   color: #58a6ff;
   font-weight: 500;
   margin: 0.5rem 0 1rem;
@@ -255,62 +275,94 @@ nav {
 .job ul {
   padding-left: 20px;
   list-style-type: disc;
-  color: #c9d1d9; /* Matches Projects list text color */
-  line-height: 1.7; /* Matches Projects line-height */
+  color: #c9d1d9;
+  line-height: 1.7;
 }
 
 .job ul li {
-  margin-bottom: 0.5rem; /* Matches Projects */
+  margin-bottom: 0.5rem;
 }
 
-.job .tech{
+.job .tech {
   color: #c9d1d9;
   font-style: normal;
 }
+
+/* Role progression badges */
+.role-progression {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.role-badge {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  background: #21262d;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.role-badge.current {
+  border-color: #58a6ff;
+  color: #58a6ff;
+  background: rgba(88,166,255,0.08);
+}
+
+.role-date {
+  color: #6e7681;
+  font-size: 0.75rem;
+}
+
 /* ==============================
    Projects
 ============================== */
 #projects {
-  padding: 3rem 2rem; /* Matches other sections */
-  background-color: #0d1117; /* Dark background like Hero/Experience */
+  padding: 3rem 2rem;
+  background-color: #0d1117;
 }
 
 #projects h2 {
-  font-size: 2rem; /* Matches other section headings */
+  font-size: 2rem;
   margin-bottom: 1.5rem;
-  border-left: 5px solid #58a6ff; /* Same accent as timeline */
+  border-left: 5px solid #58a6ff;
   padding-left: 0.75rem;
-  color: #f0f6fc; /* Light text */
+  color: #f0f6fc;
   text-align: left;
 }
 
 .project {
-  margin-bottom: 2rem; /* Matches timeline jobs spacing */
-  padding: 1.5rem 2rem; /* Slightly smaller padding for consistency */
-  border-left: 4px solid #58a6ff; /* Accent color consistent with timeline */
-  background-color: #161b22; /* Dark card background */
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid #58a6ff;
+  background-color: #161b22;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* Subtle shadow */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(88,166,255,0.3); /* Subtle glow on hover */
+  box-shadow: 0 8px 20px rgba(88,166,255,0.3);
 }
 
 .project h3 {
-  font-size: 1.25rem; /* Matches Experience job titles */
+  font-size: 1.25rem;
   color: #58a6ff;
-  margin-bottom: 0.5rem; /* Consistent spacing with other sections */
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .project .techstack {
-  font-size: 0.95rem; /* Matches Experience techstack */
-  color: #58a6ff; /* Consistent lighter text */
+  font-size: 0.95rem;
+  color: #58a6ff;
   font-weight: 500;
   margin-bottom: 0.75rem;
   font-style: italic;
@@ -319,26 +371,15 @@ nav {
 .project ul {
   padding-left: 20px;
   list-style-type: disc;
-  color: #c9d1d9; /* Matches list text color in other sections */
-  line-height: 1.7; /* Matches Experience/About spacing */
+  color: #c9d1d9;
+  line-height: 1.7;
 }
 
 .project ul li {
-  margin-bottom: 0.5rem; /* Matches other sections */
+  margin-bottom: 0.5rem;
 }
 
-.project h3 a.github-link img {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.2s;
-  filter: brightness(0) invert(1); /* Visible on dark background */
-}
-
-.project h3 a.github-link img:hover {
-  transform: scale(1.2);
-}
-
-.project .tech{
+.project .tech {
   color: #c9d1d9;
   font-style: normal;
 }
@@ -364,28 +405,35 @@ nav {
   font-size: 0.9rem;
 }
 
-.edu span, 
-.edu p {
-  text-align: left;  
-  max-width: 800px;
-  line-height: 1.7;
-}
-
 /* ==============================
    Skills
 ============================== */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skill-group h4 {
+  color: #58a6ff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.6rem;
 }
 
 .skills span {
   background: #21262d;
   border: 1px solid #30363d;
-  padding: 0.5rem 0.75rem;
+  padding: 0.4rem 0.75rem;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: 0.3s;
 }
 
@@ -403,7 +451,7 @@ nav {
 }
 
 #certifications li {
-  text-align: left; 
+  text-align: left;
   max-width: 800px;
   line-height: 1.7;
   margin-bottom: 0.75rem;
@@ -417,6 +465,7 @@ nav {
   position: absolute;
   left: 0;
 }
+
 #certifications .date {
   font-size: 0.9rem;
   color: #8b949e;
@@ -455,12 +504,13 @@ footer {
 }
 
 /* ==============================
-   Responsive Drawer & Hero
+   Responsive
 ============================== */
 @media (max-width: 768px) {
-    .section {
+  .section {
     padding: 2rem 1.5rem;
   }
+
   .hamburger {
     display: flex;
   }
@@ -504,14 +554,19 @@ footer {
     width: 180px;
     height: 180px;
   }
-  #about p {
-  text-align: justify;
-  max-width: 800px;   
-  line-height: 1.8;  
-  margin: auto;       
-}
 
-#experience {
+  .hero-btns {
+    justify-content: center;
+  }
+
+  #about p {
+    text-align: justify;
+    max-width: 800px;
+    line-height: 1.8;
+    margin: auto;
+  }
+
+  #experience {
     padding: 2rem 1.5rem;
   }
 
@@ -526,11 +581,15 @@ footer {
   .job p.techstack {
     font-size: 0.85rem;
   }
-  
- #projects {
+
+  .role-progression {
+    flex-direction: column;
+  }
+
+  #projects {
     padding: 2rem 1.5rem;
   }
-  
+
   .project {
     padding: 1rem 1.5rem;
   }
@@ -542,14 +601,4 @@ footer {
   .project .techstack {
     font-size: 0.85rem;
   }
-}
-
-/* ==============================
-   About Section
-============================== */
-#about p {
-  text-align: justify;
-  max-width: 800px;  
-  line-height: 1.8;
-  margin: 0;  
 }
