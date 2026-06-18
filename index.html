@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aryan Mukesh Jain | Full Stack Developer</title>
+  <title>Aryan Mukesh Jain | Full Stack Web Developer</title>
+  <meta name="description" content="Full Stack Web Developer with 4+ years of experience building scalable, enterprise-grade web applications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <div class="logo">AJ<span class="cursor">_</span></div>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
+  <!-- ── NAVIGATION ── -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner">
+      <a href="#hero" class="nav-logo">AJ<span class="logo-cursor">_</span></a>
+
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -25,233 +26,494 @@
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon sun">☀️</span>
+          <span class="theme-icon moon">🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- ── HERO ── -->
+  <section id="hero" class="hero">
+    <div class="hero-bg-grid"></div>
     <div class="hero-content">
-      <div class="hero-photo">
-        <img src="IMG_3031.PNG" alt="Aryan Mukesh Jain">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring">
+          <img src="IMG_3031.PNG" alt="Aryan Mukesh Jain" class="hero-photo" />
+        </div>
+        <!-- <div class="hero-status">
+          <span class="status-dot"></span>
+          Available for work
+        </div> -->
       </div>
       <div class="hero-text">
-        <h1 style="margin-bottom: 0px;">Hello, I'm</h1>
-        <h1><span class="highlight">Aryan Mukesh Jain</span></h1>
-        <h2>Full Stack & Frontend Web Developer</h2>
-        <div class="hero-btns">
-          <a href="#experience" class="btn">View My Work</a>
-          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <p class="hero-eyebrow">Hello, I'm</p>
+        <h1 class="hero-name">Aryan Mukesh Jain</h1>
+        <h2 class="hero-title">
+          <span class="typed-text" id="typed-text"></span><span class="type-cursor">|</span>
+        </h2>
+        <p class="hero-bio">
+          Full Stack Web Developer with <strong>4+ years</strong> of experience building scalable, enterprise-grade web applications. Based in New Jersey.
+        </p>
+        <div class="hero-cta">
+          <a href="#experience" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero-links">
+          <a href="https://github.com/Aryan0812" target="_blank" rel="noopener" class="hero-social">GitHub</a>
+          <span class="sep">·</span>
+          <a href="https://www.linkedin.com/in/aryan0812/" target="_blank" rel="noopener" class="hero-social">LinkedIn</a>
+          <span class="sep">·</span>
+          <a href="mailto:aryanmjain785@gmail.com" class="hero-social">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section reveal">
+    <div class="section-inner">
+      <h2 class="section-heading">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Frontend and Full Stack Web Developer with 4+ years of experience building scalable, enterprise-grade web applications using <strong>React.js, Vue.js, Angular, Node.js,</strong> and <strong>Nest.js</strong>.
+          </p>
+          <p>
+            Recently earned a <strong>Master's in Computer Science from NJIT</strong>. Skilled in API integrations, Role-Based Access Control systems, real-time dashboards, and payment portals, with a strong focus on clean, maintainable code.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Companies</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Projects Shipped</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      Frontend and Full Stack Web Developer with 4+ years of experience building scalable, enterprise-grade web applications using React.js, Vue.js, Angular, Node.js, and Nest.js. Recently earned a Master's in Computer Science from NJIT. Skilled in API integrations, RBAC systems, real-time dashboards, and payment portals, with a strong focus on clean, maintainable code.
-    </p>
-  </section>
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience" class="section reveal">
+    <div class="section-inner">
+      <h2 class="section-heading">Work Experience</h2>
 
-  <!-- Experience -->
-  <section id="experience" class="section">
-    <h2>Work Experience</h2>
-    <div class="timeline">
+      <div class="timeline">
 
-      <div class="job">
-        <h3>Full Stack Web Developer – Helix Wireless Inc.</h3>
-        <h3><span class="location">📍 East Brunswick, NJ</span><span class="date"> | Jul 2025 – Present</span></h3>
-        <div class="role-progression">
-          <span class="role-badge current">Full Stack Web Developer <span class="role-date">Apr 2026 – Present</span></span>
-          <span class="role-badge">Junior Full Stack Web Developer <span class="role-date">Jan 2026 – Apr 2026</span></span>
-          <span class="role-badge">Software Developer Intern <span class="role-date">Jul 2025 – Dec 2025</span></span>
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-company">Helix Wireless Inc.</h3>
+                <p class="tl-role">Full Stack Web Developer</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-location">📍 East Brunswick, NJ</span>
+                <span class="tl-date">Jul 2025 – Present</span>
+              </div>
+            </div>
+            <div class="role-badges">
+              <span class="role-badge current">Full Stack Web Developer <em>Apr 2026 – Present</em></span>
+              <span class="role-badge">Junior Full Stack Web Developer <em>Jan 2026 – Apr 2026</em></span>
+              <span class="role-badge">Software Developer Intern <em>Jul 2025 – Dec 2025</em></span>
+            </div>
+            <div class="tl-stack">
+              <span class="tag">React.js</span><span class="tag">Nest.js</span><span class="tag">PostgreSQL</span><span class="tag">TypeScript</span><span class="tag">AWS</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Architected and shipped reusable React.js UI component library, reducing feature development time by ~30% and enforcing design consistency.</li>
+              <li>Delivered full-stack features with React.js and Nest.js, enhancing client workflows and user experience.</li>
+              <li>Implemented Role-Based Access Control (RBAC) and granular permission systems, strengthening enterprise-level security.</li>
+              <li>Resolved full-stack issues cross-functionally, improving platform performance and customer satisfaction.</li>
+            </ul>
+          </div>
         </div>
-        <p class="techstack"><span class="tech">Techstack:</span> React.js, Nest.js, PostgreSQL, TypeScript</p>
-        <ul>
-          <li>Architected and shipped reusable React.js UI component library, reducing feature development time by ~30% and enforcing design consistency.</li>
-          <li>Delivered full-stack features with React.js and Nest.js, enhancing client workflows and user experience.</li>
-          <li>Implemented Role-Based Access Control (RBAC) and granular permission systems, strengthening enterprise-level security.</li>
-          <li>Resolved full-stack issues cross-functionally, improving platform performance and customer satisfaction.</li>
-        </ul>
-      </div>
 
-      <div class="job">
-        <h3>Web Developer Intern – Rainbow Secure (GeoACL LLC)</h3>
-        <h3><span class="location">📍 Old Bridge, NJ</span><span class="date"> | Jul 2025 – Nov 2025</span></h3>
-        <p class="techstack"><span class="tech">Techstack:</span> WordPress, PHP, PostgreSQL, Stripe, XAMPP</p>
-        <ul>
-          <li>Engineered a custom WordPress MFA plugin and automated its installation workflows, reducing unauthorized access risk and cutting user setup effort by ~30%.</li>
-          <li>Built a Stripe subscription portal with tiered billing and add-on management for scalable recurring revenue.</li>
-          <li>Redesigned website UI/UX using Elementor, improving customer engagement and on-site conversion.</li>
-        </ul>
-      </div>
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-company">Rainbow Secure (GeoACL LLC)</h3>
+                <p class="tl-role">Web Developer Intern</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-location">📍 Old Bridge, NJ</span>
+                <span class="tl-date">Jul 2025 – Nov 2025</span>
+              </div>
+            </div>
+            <div class="tl-stack">
+              <span class="tag">WordPress</span><span class="tag">PHP</span><span class="tag">PostgreSQL</span><span class="tag">Stripe</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Engineered a custom WordPress MFA plugin and automated its installation workflows, reducing unauthorized access risk and cutting user setup effort by ~30%.</li>
+              <li>Built a Stripe subscription portal with tiered billing and add-on management for scalable recurring revenue.</li>
+              <li>Redesigned website UI/UX using Elementor, improving customer engagement and on-site conversion.</li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="job">
-        <h3>Full Stack Developer – Ride Electric Vehicle Inc.</h3>
-        <h3><span class="location">📍 Newark, NJ</span><span class="date"> | Jun 2024 – Present</span></h3>
-        <p class="techstack"><span class="tech">Techstack:</span> Vue.js, Node.js, Firebase, Tailwind CSS, Gemini API</p>
-        <ul>
-          <li>Built a real-time fleet management dashboard and integrated Tesla, Smartcar, and EV connector APIs for live vehicle performance, charging, and health monitoring.</li>
-          <li>Integrated a Gemini-powered chatbot to answer user queries from live database data, with plan-based usage controls to manage AI consumption and prevent abuse.</li>
-          <li>Automated daily health, document, and charging updates via Firebase Cloud Scheduler, reducing manual effort.</li>
-        </ul>
-      </div>
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-company">Ride Electric Vehicle Inc.</h3>
+                <p class="tl-role">Full Stack Developer</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-location">📍 Newark, NJ</span>
+                <span class="tl-date">Jun 2024 – June 2026</span>
+              </div>
+            </div>
+            <div class="role-badges">
+              <span class="role-badge current">Full Stack Developer <em>Aug 2025 – June 2026</em></span>
+              <span class="role-badge">Full Stack Developer - Intern <em>June 2024 – Aug 2025</em></span>
+            </div>
+            <div class="tl-stack">
+              <span class="tag">Vue.js</span><span class="tag">Node.js</span><span class="tag">Firebase</span><span class="tag">Tailwind CSS</span><span class="tag">Gemini API</span><span class="tag">GCP</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Built a real-time fleet management dashboard and integrated Tesla, Smartcar, and EV connector APIs for live vehicle performance, charging, and health monitoring.</li>
+              <li>Integrated a Gemini-powered chatbot to answer user queries from live database data, with plan-based usage controls.</li>
+              <li>Automated daily health, document, and charging updates via Firebase Cloud Scheduler, reducing manual effort.</li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="job">
-        <h3>Full Stack Developer – Reserve Bank Information Technology (ReBIT)</h3>
-        <h3><span class="location">📍 Navi Mumbai, India</span><span class="date"> | Jun 2022 – Jul 2023</span></h3>
-        <p class="techstack"><span class="tech">Techstack:</span> Angular 14, Java, MySQL, Bootstrap 5</p>
-        <ul>
-          <li>Built a digital CMS for the Reserve Bank of India, modernizing document storage and improving efficiency by 20%.</li>
-          <li>Translated UX designs into responsive Angular 14 pages and implemented MySQL schema with API integrations.</li>
-        </ul>
-      </div>
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-company">Reserve Bank Information Technology (ReBIT)</h3>
+                <p class="tl-role">Full Stack Developer</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-location">📍 Navi Mumbai, India</span>
+                <span class="tl-date">Jun 2022 – Jul 2023</span>
+              </div>
+            </div>
+            <div class="tl-stack">
+              <span class="tag">Angular 14</span><span class="tag">Java</span><span class="tag">MySQL</span><span class="tag">Bootstrap 5</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Built a digital CMS for the Reserve Bank of India, modernizing document storage and improving efficiency by 20%.</li>
+              <li>Translated UX designs into responsive Angular 14 pages and implemented MySQL schema with API integrations.</li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="job">
-        <h3>Software Developer Intern – Drishti Works</h3>
-        <h3><span class="location">📍 Mumbai, India</span><span class="date"> | Jun 2021 – May 2022</span></h3>
-        <p class="techstack"><span class="tech">Techstack:</span> React.js, Vue.js, Firebase, Leaflet.js, Google Cloud</p>
-        <ul>
-          <li>Built a React.js asset-tracking app with real-time maps and geofencing using Leaflet.js, integrating Firebase for auth and real-time data.</li>
-          <li>Unified multiple third-party systems into a single platform, deployed on Google Cloud for production scalability.</li>
-        </ul>
-      </div>
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-company">Drishti Works</h3>
+                <p class="tl-role">Software Developer Intern</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-location">📍 Mumbai, India</span>
+                <span class="tl-date">Jun 2021 – May 2022</span>
+              </div>
+            </div>
+            <div class="tl-stack">
+              <span class="tag">React.js</span><span class="tag">Vue.js</span><span class="tag">Firebase</span><span class="tag">Leaflet.js</span><span class="tag">GCP</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Built a React.js asset-tracking app with real-time maps and geofencing using Leaflet.js, integrating Firebase for auth and real-time data.</li>
+              <li>Unified multiple third-party systems into a single platform, deployed on Google Cloud for production scalability.</li>
+            </ul>
+          </div>
+        </div>
 
+      </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="section reveal">
+    <div class="section-inner">
+      <h2 class="section-heading">Projects</h2>
 
-    <div class="project">
-      <h3>TrekTrek <a href="https://github.com/Aryan0812/TrekTrek" target="_blank" class="github-link">🔗</a></h3>
-      <h3><span class="date">Sep 2023 – Dec 2023</span></h3>
-      <p class="techstack"><span class="tech">Techstack:</span> Django, Django Admin, HTML5, CSS, Bootstrap 5</p>
-      <ul>
-        <li>Developed a website for trek booking and sharing trek-related information using Django.</li>
-        <li>Implemented Django authentication to monitor login types and restrict unauthorized access.</li>
-        <li>Utilized Django ORM to interact with the database through Python objects.</li>
-        <li>Created wireframes that significantly aided in understanding the project flow and designing the UI.</li>
-      </ul>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon">🏔️</div>
+            <a href="https://github.com/Aryan0812/TrekTrek" target="_blank" rel="noopener" class="project-link" aria-label="TrekTrek GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3 class="project-title">TrekTrek</h3>
+          <span class="project-date">Sep 2023 – Dec 2023</span>
+          <p class="project-desc">A website for trek booking and sharing trek-related information with Django authentication and ORM.</p>
+          <div class="project-stack">
+            <span class="tag">Django</span><span class="tag">HTML5</span><span class="tag">Bootstrap 5</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Django authentication to monitor login types and restrict unauthorized access.</li>
+            <li>Django ORM for database interaction via Python objects.</li>
+            <li>Wireframes for UI design and project flow.</li>
+          </ul>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon">💊</div>
+            <a href="https://github.com/Aryan0812/easymeds" target="_blank" rel="noopener" class="project-link" aria-label="EasyMeds GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3 class="project-title">EasyMeds</h3>
+          <span class="project-date">Jun 2020 – Apr 2021</span>
+          <p class="project-desc">Android app helping users monitor medication availability at local pharmacies with chatbot and location services.</p>
+          <div class="project-stack">
+            <span class="tag">Android Studio</span><span class="tag">Firebase</span><span class="tag">DialogFlow</span>
+          </div>
+          <ul class="project-bullets">
+            <li>DialogFlow chatbot for customer interaction and barcode scanning for inventory.</li>
+            <li>Location services to find nearby medical stores.</li>
+            <li>Payment gateway integration and PDF generation.</li>
+          </ul>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon">☕</div>
+          </div>
+          <h3 class="project-title">The Tapree Café</h3>
+          <span class="project-date">Dec 2019 – Apr 2020</span>
+          <p class="project-desc">Android app enabling customers to earn game points redeemable for café food orders.</p>
+          <div class="project-stack">
+            <span class="tag">Android Studio</span><span class="tag">Firebase</span><span class="tag">Paytm</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Gamified loyalty system — play games, earn points, redeem for food.</li>
+            <li>Paytm payment gateway integration.</li>
+            <li>Auto-generated PDF invoices sent via email.</li>
+          </ul>
+        </div>
+
+      </div>
     </div>
-
-    <div class="project">
-      <h3>EasyMeds <a href="https://github.com/Aryan0812/easymeds" target="_blank" class="github-link">🔗</a></h3>
-      <h3><span class="date">Jun 2020 – Apr 2021</span></h3>
-      <p class="techstack"><span class="tech">Techstack:</span> Android Studio, Firebase, DialogFlow, Payment Gateway, iText PDF</p>
-      <ul>
-        <li>Created an Android application to help users monitor medication availability at local pharmacies.</li>
-        <li>Integrated a DialogFlow chatbot for customer interaction and barcode scanning for inventory tracking.</li>
-        <li>Implemented location services to find nearby medical stores.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <h3>The Tapree Café</h3>
-      <h3><span class="date">Dec 2019 – Apr 2020</span></h3>
-      <p class="techstack"><span class="tech">Techstack:</span> Android Studio, Firebase, Paytm Payment Gateway</p>
-      <ul>
-        <li>Developed an Android app enabling customers to play games and accumulate points redeemable for food orders.</li>
-        <li>Integrated Paytm payment gateway and auto-generated PDF invoices sent via email.</li>
-      </ul>
-    </div>
-
   </section>
 
-  <!-- Education -->
-  <section id="education" class="section">
-    <h2>Education</h2>
-    <div class="edu">
-      <h3>New Jersey Institute of Technology (NJIT)</h3>
-      <span class="date">M.S. in Computer Science — Sep 2023 – May 2025 | Newark, NJ</span>
-    </div>
-    <div class="edu">
-      <h3>NMIMS University — Mukesh Patel School of Technology</h3>
-      <span class="date">B.Tech in Computer Engineering — Jul 2016 – May 2022 | Mumbai, India</span>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h4>Frontend</h4>
-        <div class="skills">
-          <span>React.js</span><span>Vue.js</span><span>Angular 14</span><span>React Native</span>
-          <span>HTML5</span><span>CSS3</span><span>Tailwind CSS</span><span>Bootstrap 5</span>
+  <!-- ── EDUCATION ── -->
+  <section id="education" class="section reveal">
+    <div class="section-inner">
+      <h2 class="section-heading">Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-info">
+            <h3>New Jersey Institute of Technology (NJIT)</h3>
+            <p class="edu-degree">M.S. in Computer Science</p>
+            <p class="edu-meta">Sep 2023 – May 2025 · Newark, NJ</p>
+          </div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon">🏫</div>
+          <div class="edu-info">
+            <h3>NMIMS University — Mukesh Patel School of Technology</h3>
+            <p class="edu-degree">B.Tech in Computer Engineering</p>
+            <p class="edu-meta">Jul 2016 – May 2022 · Mumbai, India</p>
+          </div>
         </div>
       </div>
-      <div class="skill-group">
-        <h4>Backend</h4>
-        <div class="skills">
-          <span>Node.js</span><span>Nest.js</span><span>Spring Boot</span><span>Django</span><span>PHP</span>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section reveal">
+    <div class="section-inner">
+      <h2 class="section-heading">Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">
+            <span class="skill-icon">⚡</span> Frontend
+          </h4>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="95">React.js</span>
+            <span class="skill-tag" data-level="85">Vue.js</span>
+            <span class="skill-tag" data-level="80">Angular 14</span>
+            <span class="skill-tag" data-level="70">React Native</span>
+            <span class="skill-tag" data-level="95">HTML5</span>
+            <span class="skill-tag" data-level="90">CSS3</span>
+            <span class="skill-tag" data-level="85">Tailwind CSS</span>
+            <span class="skill-tag" data-level="90">Bootstrap 5</span>
+          </div>
         </div>
-      </div>
-      <div class="skill-group">
-        <h4>Languages</h4>
-        <div class="skills">
-          <span>JavaScript</span><span>TypeScript</span><span>Java</span><span>Python</span><span>PHP</span>
+
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">
+            <span class="skill-icon">🔧</span> Backend
+          </h4>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="85">Node.js</span>
+            <span class="skill-tag" data-level="80">Nest.js</span>
+            <span class="skill-tag" data-level="75">Spring Boot</span>
+            <span class="skill-tag" data-level="70">Django</span>
+            <span class="skill-tag" data-level="60">PHP</span>
+          </div>
         </div>
-      </div>
-      <div class="skill-group">
-        <h4>Databases</h4>
-        <div class="skills">
-          <span>PostgreSQL</span><span>MySQL</span><span>Firebase</span><span>MongoDB</span>
+
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">
+            <span class="skill-icon">💻</span> Languages
+          </h4>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="95">JavaScript</span>
+            <span class="skill-tag" data-level="90">TypeScript</span>
+            <span class="skill-tag" data-level="75">Java</span>
+            <span class="skill-tag" data-level="70">Python</span>
+            <span class="skill-tag" data-level="65">PHP</span>
+          </div>
         </div>
+
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">
+            <span class="skill-icon">🗄️</span> Databases
+          </h4>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="85">PostgreSQL</span>
+            <span class="skill-tag" data-level="80">MySQL</span>
+            <span class="skill-tag" data-level="85">Firebase</span>
+            <span class="skill-tag" data-level="70">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h4 class="skill-group-title">
+            <span class="skill-icon">☁️</span> Cloud & Tools
+          </h4>
+          <div class="skill-tags">
+            <span class="skill-tag" data-level="75">GCP</span>
+            <span class="skill-tag" data-level="60">AWS</span>
+            <span class="skill-tag" data-level="90">Git</span>
+            <span class="skill-tag" data-level="50">Docker</span>
+          </div>
+        </div>
+
       </div>
-      <div class="skill-group">
-        <h4>Cloud & Tools</h4>
-        <div class="skills">
-          <span>GCP</span><span>AWS</span><span>Git</span><span>Docker</span>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATIONS ── -->
+  <section id="certifications" class="section reveal">
+    <div class="section-inner">
+      <h2 class="section-heading">Certifications</h2>
+      <div class="cert-list">
+        <div class="cert-item reveal">
+          <div class="cert-badge">📜</div>
+          <div class="cert-info">
+            <p class="cert-name">React.js Essential Training</p>
+            <span class="cert-date">Jan 2024</span>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <div class="cert-badge">📜</div>
+          <div class="cert-info">
+            <p class="cert-name">Advanced Angular Training</p>
+            <span class="cert-date">Nov 2022</span>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <div class="cert-badge">📜</div>
+          <div class="cert-info">
+            <p class="cert-name">The Complete React Native + Hooks Course</p>
+            <span class="cert-date">Feb 2022</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Certifications -->
-  <section id="certifications" class="section">
-    <h2>Certifications</h2>
-    <ul>
-      <li>React.js Essential Training <span class="date">– Jan 2024</span></li>
-      <li>Advanced Angular Training <span class="date">– Nov 2022</span></li>
-      <li>The Complete React Native + Hooks Course <span class="date">– Feb 2022</span></li>
-    </ul>
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section reveal">
+    <div class="section-inner">
+      <h2 class="section-heading">Get In Touch</h2>
+      <p class="contact-intro"> Always happy to connect. Whether you have a project to discuss, a question, or just want to say hi - feel free to reach out.</p>
+      <div class="contact-grid">
+        <a href="mailto:aryanmjain785@gmail.com" class="contact-card reveal">
+          <span class="contact-card-icon">📧</span>
+          <div>
+            <p class="contact-card-label">Email</p>
+            <p class="contact-card-value">aryanmjain785@gmail.com</p>
+          </div>
+        </a>
+        <a href="https://github.com/Aryan0812" target="_blank" rel="noopener" class="contact-card reveal">
+          <span class="contact-card-icon">🐙</span>
+          <div>
+            <p class="contact-card-label">GitHub</p>
+            <p class="contact-card-value">github.com/Aryan0812</p>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/aryan0812/" target="_blank" rel="noopener" class="contact-card reveal">
+          <span class="contact-card-icon">🔗</span>
+          <div>
+            <p class="contact-card-label">LinkedIn</p>
+            <p class="contact-card-value">linkedin.com/in/aryan0812</p>
+          </div>
+        </a>
+        <div class="contact-card reveal">
+          <span class="contact-card-icon">📱</span>
+          <div>
+            <p class="contact-card-label">Phone</p>
+            <p class="contact-card-value">+1 (862) 423-6612</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact">
-    <h2>Contact</h2>
-    <p>Let's connect!</p>
-    <ul>
-      <li>📧 <a href="mailto:aryanmjain785@gmail.com">aryanmjain785@gmail.com</a></li>
-      <li>🐙 <a href="https://github.com/Aryan0812" target="_blank">GitHub</a></li>
-      <li>🔗 <a href="https://www.linkedin.com/in/aryan0812/" target="_blank">LinkedIn</a></li>
-      <li>📱 +1 (862)-423-6612</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>© 2025 Aryan Mukesh Jain</p>
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <p>Designed & built by <strong>Aryan Mukesh Jain</strong> · 2026</p>
+    <div class="footer-links">
+      <a href="https://github.com/Aryan0812" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/aryan0812/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
   </footer>
 
-  <script>
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("nav-links");
-
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      navLinks.classList.toggle("active");
-    });
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navLinks.classList.remove("active");
-      });
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
